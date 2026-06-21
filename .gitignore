@@ -1,0 +1,12 @@
+# Playbook da Faculdade
+playbook_faculdade/
+
+# Arquivos Auxiliares de Compilação do LaTeX
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
+*.fls
+*.fdb_latexmk
