@@ -1,0 +1,172 @@
+\documentclass[portuguese]{sbcreviews-2025}%
+
+\usepackage{xcolor}
+\usepackage[misc,geometry]{ifsym} 
+\usepackage{aas_macros}
+\usepackage[bottom]{footmisc}
+\usepackage{tabularray}
+\usepackage{afterpage}
+\usepackage{url}
+\usepackage{pifont}
+
+\setcitestyle{square}
+
+\definecolor{engtitle}{rgb}{0.5,0.5,0.5}
+\definecolor{orcidlogo}{rgb}{0.37,0.48,0.13}
+\definecolor{unilogo}{rgb}{0.16, 0.26, 0.58}
+\definecolor{maillogo}{rgb}{0.58, 0.16, 0.26}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.0}
+
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+\jid{ROCS}
+\jtitle{SBC Computing Reviews, 202X, XX:1}
+\issn{2966-3938}
+\doi{10.5753/rocs.202X.XXXXXX}
+\copyrightstatement{...}
+\jyear{202X}
+
+\category{Portfólio Individual}
+\title[Proposta de Aplicativo Mobile Multilíngue para Prática de Idiomas]{Proposta de Aplicativo Mobile Multilíngue para Prática de Língua Inglesa e Espanhol Castelhano}
+
+\author[Jeziel Nogueira 2026]{
+\affil{\textbf{Jeziel Nogueira}~[{Católica de Santa Catarina}~|~\href{mailto:jeziel.nogueira@catolicasc.edu.br}{\textit{jeziel.nogueira@catolicasc.edu.br}}]}
+}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\maketitle
+
+\noindent Faculdade Católica de Santa Catarina, R. dos Imigrantes, 500, Rau, Jaraguá do Sul, Santa Catarina, 89254-430, Brasil.
+
+\begin{abstract-pt}
+Este trabalho apresenta a proposta de desenvolvimento de um ecossistema mobile educacional multilíngue voltado à prática complementar das línguas inglesa e espanhola (focando no dialeto espanhol castelhano), em parceria com a escola de idiomas Voo Idiomas Jaraguá do Sul. O projeto surge para suprir a lacuna entre as aulas presenciais e o estudo autônomo extraclasse, oferecendo uma solução interativa e contextualizada com o cotidiano dos estudantes. Sob a ótica da engenharia de software e da tecnologia educacional, a solução proposta adota uma arquitetura Server-Driven UI para flexibilidade pedagógica via Headless CMS, combinada a um motor fonético híbrido polimórfico desenhado a partir da Profundidade Ortográfica (Orthographic Depth) de cada idioma (inglês como ortografia profunda através do Double Metaphone e Levenshtein; espanhol castelhano como ortografia rasa via Levenshtein direto sanitizado). O andamento atual do projeto encontra-se na fase de especificação de requisitos funcionais, não funcionais e modelagem arquitetural (TCC 1), com cronograma de implementação prática e testes de campo planejado para o semestre subsequente. Espera-se que a solução contribua significativamente para o engajamento dos alunos e forneça dados analíticos (Learning Analytics) relevantes para guiar intervenções pedagógicas docentes.
+\end{abstract-pt}
+
+\begin{abstract-en}
+This work presents a proposal for developing a multilingual educational mobile ecosystem focused on supplementary English and Spanish (specifically Castilian Spanish) practice, in partnership with the language school Voo Idiomas Jaraguá do Sul. The project aims to bridge the gap between in-person classes and self-directed study outside the classroom, offering an interactive solution tailored to students' daily routines. From a software engineering and educational technology perspective, the proposed solution adopts a Server-Driven UI architecture for pedagogical flexibility managed via a Headless CMS, combined with a polymorphic hybrid phonetic engine designed based on the Orthographic Depth of each language (English as deep orthography evaluated using Double Metaphone and Levenshtein; Castilian Spanish as shallow orthography using direct sanitized Levenshtein). The project is currently in the functional and non-functional requirements specification and architectural modeling phase (TCC 1), with the implementation and field-testing scheduled for the subsequent semester. The ecosystem is expected to significantly increase student engagement and provide valuable Learning Analytics to guide precise teacher interventions.
+\end{abstract-en}
+
+\begin{pchaves}
+aplicativo mobile multilíngue, ensino de idiomas, profundidade ortográfica, Server-Driven UI, tecnologia educacional
+\end{pchaves}
+
+\begin{keywords}
+multilingual mobile application, language teaching, orthographic depth, Server-Driven UI, educational technology
+\end{keywords}
+
+\begin{dates}
+\noindent{\sffamily\textbf{Recebido/Received:}} DD Month YYYY~~~$\bullet$~~~
+{\sffamily\textbf{Aceito/Accepted:}} DD Month YYYY~~~$\bullet$~~~
+{\sffamily\textbf{Publicado/Published:}} DD Month YYYY
+\end{dates}
+
+\end{frontmatter}
+
+\section{Introdução}
+\label{sec:intro}
+
+O presente Projeto de Aprendizagem Colaborativa Extensionista VII (PAC ESOFT) tem como objetivo o desenvolvimento de um ecossistema mobile educacional multilíngue voltado ao apoio pedagógico, em parceria com a escola de idiomas Voo Idiomas Jaraguá do Sul.
+
+A proposta surgiu a partir da identificação da necessidade de complementar o ensino presencial tradicional com ferramentas digitais que incentivem a prática autônoma das línguas inglesa e espanhola (espanhol castelhano) fora do ambiente de sala de aula. Nesse contexto, em reuniões e alinhamentos pedagógicos com a gerência da escola parceira, elicitaram-se as necessidades de prática de conversação (fala e audição) e gramática básica/intermediária contextualizada em cenários do cotidiano, estabelecendo uma cooperação direta para o teste piloto do sistema.
+
+Atualmente, o projeto encontra-se na fase de análise, especificação de requisitos e modelagem arquitetural (TCC 1), não havendo ainda o início do desenvolvimento físico do código. As atividades concentram-se na definição do escopo metodológico, mitigação de riscos de nuvem, desenho da arquitetura serverless de baixo custo e estruturação científica da solução de contorno para o corretor fonético. Este trabalho caracteriza-se como uma pesquisa aplicada de desenvolvimento tecnológico, com abordagem qualitativa e validação experimental planejada por meio de um grupo de controle estudantil na instituição parceira.
+
+\section{Problema de Pesquisa}
+
+Apesar da importância da prática contínua no aprendizado de uma língua estrangeira, muitos estudantes enfrentam dificuldades para manter uma rotina de estudos produtiva fora do ambiente escolar.
+
+Dessa forma, define-se o seguinte problema de pesquisa:
+
+\textit{Como apoiar alunos de uma escola de idiomas na prática contínua e autônoma de línguas estrangeiras (inglês e espanhol castelhano) fora da sala de aula, utilizando um ecossistema tecnológico móvel interativo que alie renderização dinâmica de conteúdo, avaliação fonética adaptada e acompanhamento docente?}
+
+\section{Hipótese}
+
+A hipótese científica que norteia este projeto é:
+
+\textit{O desenvolvimento de um aplicativo mobile multilíngue, baseado em uma arquitetura Server-Driven UI e dotado de um motor fonético polimórfico calibrado pela Profundidade Ortográfica dos idiomas, atrelado a um painel de Learning Analytics docente, é capaz de potencializar o engajamento estudantil e prover uma prática de conversação extraclasse pedagogicamente orientada e financeiramente sustentável para escolas de idiomas locais.}
+
+\section{Objetivos}
+
+\subsection{Objetivo Geral}
+
+Desenvolver um ecossistema móvel educacional multilíngue que auxilie alunos de uma escola de idiomas na prática complementar e autônoma de inglês e espanhol castelhano, por meio de lições interativas adaptativas e acompanhamento analítico do desempenho docente.
+
+\subsection{Objetivos Específicos}
+
+\begin{itemize}
+    \item Projetar e desenvolver uma aplicação mobile multiplataforma (Android e iOS) intuitiva e de alta usabilidade para os estudantes da escola parceira.
+    \item Implementar exercícios de prática gramatical dinâmica (múltipla escolha e preenchimento de lacunas) cujos layouts e conteúdos sejam renderizados em tempo de execução via \textit{Server-Driven UI} (SDUI).
+    \item Disponibilizar exercícios de compreensão auditiva (\textit{listening}) integrados com reprodução de arquivos de áudio em nuvem e validação de lacunas textuais.
+    \item Implementar atividades de prática oral de fala (\textit{speaking}) integrando captura local de voz, transcrição externa robusta parametrizada (OpenAI Whisper API) via proxy seguro (\textit{Serverless Cloud Functions}) e avaliação de similaridade fonética.
+    \item Projetar uma arquitetura baseada no padrão de projeto \textit{Strategy} para processamento local de strings fonéticas na borda, diferenciando ortografias profundas (inglês) de rasas (espanhol castelhano) para evitar falsos negativos na avaliação de pronúncia.
+    \item Desenvolver e implantar a retaguarda do sistema através de uma abordagem \textit{No-Backend} com \textit{BaaS} (Firebase) e gestão curricular, matrículas, restrição de cadastro por código de ativação único e controle de acessos de idiomas baseados em painel administrativo de \textit{Headless CMS Strapi} com sincronização transacional em nuvem.
+    \item Implementar um painel de \textit{Learning Analytics} (\textit{Dashboard} do Professor) alimentado pelas telemetrias de progresso para auxiliar docentes no diagnóstico individual e coletivo das turmas.
+    \item Projetar uma arquitetura escalável para futuras expansões pedagógicas e tecnológicas do ecossistema.
+\end{itemize}
+
+\section{Proposta de Estruturação}
+
+Para assegurar o rigor metodológico e a viabilidade da pesquisa ao longo do calendário do TCC (dividido entre TCC 1 no presente semestre e TCC 2 no semestre subsequente), a monografia final será estruturada em sete capítulos lógicos e interdependentes. Esta divisão organiza a progressão do trabalho desde a sua fundamentação teórica abstrata até a consolidação empírica do artefato desenvolvido, conforme delineado a seguir:
+
+\begin{itemize}
+    \item \textbf{Capítulo 1 – Introdução:} Apresentação do contexto do projeto de extensão, delimitação do problema de pesquisa no âmbito da escola de idiomas parceira, hipótese científica e definição dos objetivos gerais e específicos do trabalho.
+    \item \textbf{Capítulo 2 – Fundamentação Teórica:} Revisão da literatura científica acerca do aprendizado de idiomas auxiliado por dispositivos móveis (\textit{MALL}), conceitos linguísticos de \textit{Profundidade Ortográfica} (ortografias opacas vs. translúcidas) e a relevância de mecânicas de engajamento de gamificação baseadas em psicologia comportamental.
+    \item \textbf{Capítulo 3 – Metodologia:} Descrição da abordagem de pesquisa aplicada de desenvolvimento tecnológico, incluindo as técnicas qualitativas para alinhamento com a coordenação escolar e os procedimentos para a realização do teste piloto com grupo de controle estudantil.
+    \item \textbf{Capítulo 4 – Análise e Modelagem de Requisitos:} Apresentação do modelo formal de requisitos funcionais (incluindo as regras de negócio de gamificação leve e ofensivas) e não funcionais (focados em segurança de chaves, integridade de dados e performance). Detalhamento dos diagramas UML de Casos de Uso e de classes baseadas no padrão de projeto estrutural \textit{Strategy}.
+    \item \textbf{Capítulo 5 – Desenvolvimento e Implementação da Solução:} Detalhamento técnico da codificação física do ecossistema móvel. Aborda a integração da arquitetura \textit{Server-Driven UI} consumindo JSON do \textit{Headless CMS Strapi} hospedado em \textit{PaaS} (Render/Railway), o encapsulamento seguro da Whisper API em \textit{Serverless Cloud Functions} no Firebase, o fluxo de registro com código de ativação transacional, a sincronização de matrículas estudantis via Webhooks com restrição de acesso por \textit{Firestore Security Rules} e a implementação local do motor fonético híbrido.
+    \item \textbf{Capítulo 6 – Resultados e Discussões:} Apresentação analítica dos dados coletados durante o teste piloto de 4 semanas na escola parceira, detalhando o comportamento da heurística adaptativa baseada em regras lógicas, a exatidão do motor de correção de pronúncia na borda e os relatórios gerados no painel de \textit{Learning Analytics} docente.
+    \item \textbf{Capítulo 7 – Conclusão:} Síntese das contribuições científicas e extensionistas alcançadas pelo aplicativo, limitações encontradas no MVP de TCC e propostas fundamentadas de trabalhos futuros para expansão do sistema comercial.
+\end{itemize}
+
+\section{Trabalhos Correlatos e Análise Comparativa}
+\label{sec:correlatos}
+
+A fim de situar a presente proposta, foi realizada uma revisão bibliográfica e um mapeamento de mercado de soluções voltadas ao aprendizado de idiomas assistido por segurança e mobilidade (\textit{Mobile Assisted Language Learning - MALL}). A análise selecionou três artigos científicos reais de relevância acadêmica e três plataformas de software consolidadas comercialmente, contrastando suas funcionalidades e arquiteturas com os requisitos da solução proposta neste trabalho, conforme sintetizado na Tabela~\ref{tab:comparativa}.
+
+\begin{table}[htbp]
+\centering
+\caption{Tabela comparativa de trabalhos correlatos técnicos e científicos.}
+\label{tab:comparativa}
+\begin{tblr}{
+  colspec = {X[1.6,l] X[0.8,c] X[1.0,c] X[1.0,c] X[0.8,c] X[0.8,c]},
+  hlines, vlines,
+  row{1} = {font=\bfseries, bg=gray!15, halign=c},
+  colsep = 4pt,
+  rowsep = 4pt
+}
+Trabalho / Solução & SDUI & Multi-idioma & Motor de Fala & Adaptativo & Painel Docente \\
+Çakmak (2019)~\cite{cakmak2019} & Não & Sim & Não & Não & Não \\
+Bernardo (2013)~\cite{bernardo2013} & Não & Não & Não & Não & Não \\
+Kim e Kwon (2012)~\cite{kim2012} & Não & Sim & Sim & Não & Não \\
+Duolingo\textsuperscript{1} & Sim & Sim & Sim & Sim & Não \\
+Babbel\textsuperscript{2} & Sim & Sim & Sim & Não & Não \\
+ERP Sponte\textsuperscript{3} & Não & Não & Não & Não & Sim \\
+\textbf{Proposta (Este Trabalho)} & \textbf{Sim} & \textbf{Sim} & \textbf{Sim} & \textbf{Sim} & \textbf{Sim} \\
+\end{tblr}
+\end{table}
+\footnotetext[1]{\url{https://www.duolingo.com}}
+\footnotetext[2]{\url{https://pt.babbel.com}}
+\footnotetext[3]{\url{https://www.sponte.com.br}}
+
+A análise comparativa evidencia que, embora a literatura científica e o mercado comercial contemplem soluções robustas isoladas, há uma lacuna clara no que tange à integração dessas frentes para escolas de idiomas locais. Os artigos científicos revisados abordam os conceitos de forma fragmentada: Çakmak (2019)~\cite{cakmak2019} discute a mobilidade e o panorama do MALL no ensino de línguas, mas sem propor arquiteturas de voz ou motores de fala; Bernardo (2013)~\cite{bernardo2013} avalia o uso instrucional de dispositivos móveis e a necessidade de romper com velhos paradigmas educacionais, mas sem detalhar soluções técnicas aplicadas; e Kim e Kwon (2012)~\cite{kim2012} exploram aplicativos de smartphone para MALL, mapeando práticas orais elementares de fala baseadas em reconhecimento de voz simples em apps comerciais, porém de forma puramente linear, sem adaptabilidade linguística a homófonos ou acoplamento a dashboards docentes.
+
+No cenário corporativo, plataformas globais altamente consolidadas como o Duolingo e o Babbel pecam pelo isolamento pedagógico, atuando de forma estritamente \textit{standalone}, o que impede o professor ou coordenador de uma instituição de acompanhar, avaliar ou personalizar as lições em tempo real de acordo com as necessidades observadas nas aulas físicas. Por outro lado, os sistemas integrados de gestão escolar (ERPs), como o Sponte, limitam-se a dados administrativos e financeiros, sem oferecer qualquer interface de prática ativa ou correções de pronúncia aos estudantes.
+
+Dessa forma, a solução proposta diferencia-se e inova ao unificar a alta tecnologia de renderização dinâmica (\textit{Server-Driven UI}) e a análise de pronúncia híbrida baseada em profundidade ortográfica na borda com uma camada de \textit{Learning Analytics} docente (\textit{Dashboard} do Professor). O ecossistema deixa de ser um aplicativo isolado e se valida como uma ferramenta extensionista real de apoio pedagógico controlado, provendo autonomia à coordenação da escola de idiomas parceira para gerenciar conteúdos via \textit{Headless CMS} e intervir no desenvolvimento individual de seus estudantes.
+
+\begin{thebibliography}{99}
+
+\bibitem{cakmak2019} ÇAKMAK, F. (2019). "Mobile Learning and Mobile Assisted Language Learning in Focus". \textit{Language and Technology}, v. 1, n. 1, p. 30–48. Disponível em: \url{https://dergipark.org.tr/en/pub/lantec/article/517381}.
+
+\bibitem{bernardo2013} BERNARDO, J. C. O. (2013). "Dispositivos móveis digitais na incrementação do processo de ensino e aprendizagem: mobile-learning no rompimento de paradigmas". \textit{Revista EDaPECI}, v. 13, n. 1, p. 141-157. Disponível em: \url{https://periodicos.ufs.br/edapeci/article/view/925}. DOI: \url{https://doi.org/10.29276/redapeci.2013.13.1925.141-157}.
+
+\bibitem{kim2012} KIM, H.; KWON, Y. H. (2012). "Exploring Smartphone Applications for Effective Mobile-Assisted Language Learning". \textit{Multimedia-Assisted Language Learning}, v. 15, n. 1, p. 31-57. Disponível em: \url{https://cau.scholarworks.kr/item/a348b528-cb6b-403f-8279-994995827235}. DOI: \url{https://doi.org/10.15702/mall.2012.15.1.31}.
+
+\end{thebibliography}
+
+\end{document}

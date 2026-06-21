@@ -6,12 +6,12 @@ A solução foi projetada em cooperação e parceria piloto direta com a escola 
 
 ---
 
-## 📱 O Projeto e Objetivo Geral
+## O Projeto e Objetivo Geral
 O objetivo principal deste ecossistema é apoiar alunos da escola parceira na prática complementar e autônoma de conversação, listening e gramática extraclasse. O aplicativo atua como um **Thick Client** multiplataforma móvel que consome lições dinâmicas e fornece relatórios diagnósticos de desempenho para os professores.
 
 ---
 
-## 🏗️ Arquitetura do Ecossistema (Serverless / No-Backend)
+## Arquitetura do Ecossistema (Serverless / No-Backend)
 
 A arquitetura foi estruturada para garantir escalabilidade, latência zero de processamento e baixíssimo custo operacional de infraestrutura (aproximadamente R$ 0,71 mensais por aluno ativo em produção comercial).
 
@@ -73,7 +73,7 @@ O **Firebase** é utilizado como BaaS para gerenciar:
 
 ---
 
-## 🚀 Diferenciais de Inovação Pedagógica e Engenharia
+## Diferenciais de Inovação Pedagógica e Engenharia
 
 ### A. Motor Fonético Polimórfico (Strategy Pattern)
 A correção de fala é processada localmente na borda usando conceitos de **Profundidade Ortográfica (*Orthographic Depth*)**:
@@ -102,23 +102,27 @@ Para garantir conformidade legal com a Lei Geral de Proteção de Dados (LGPD - 
 
 ---
 
-## 📂 Organização do Workspace de Desenvolvimento
+## Organização de Pastas do Repositório
 
-Para fins de organização e controle acadêmico, o workspace local de desenvolvimento está estruturado conforme abaixo. Os arquivos e pastas de suporte acadêmico e especificações do Notion são mantidos localmente e não são adicionados a este repositório público de código:
+O repositório está estruturado conforme abaixo, contendo o código/configurações do projeto e a documentação das entregas acadêmicas (`atividade_academica/`):
 
 ```
-App_mobile_idiomas/
-├── multilingual-sdui-app/               # Este repositório Git (Código Fonte e README)
-│   ├── .gitignore
-│   └── README.md
-├── playbook_faculdade/                  # Playbook de TCC da faculdade (ignorado no Git)
-├── fonte_notion/                        # Documentos de requisitos do Notion
-└── atividade_academica/                 # Artigo LaTeX (N3) e roteiro do pitch
+multilingual-sdui-app/
+├── .gitignore                           # Regras de ignores do Git (com ignores do LaTeX)
+├── README.md                            # Documentação principal (este arquivo)
+└── atividade_academica/                 # Arquivos acadêmicos oficiais
+    ├── Atividade_N1/                    # PDF da Proposta Inicial
+    ├── Atividade_N2/                    # LaTeX e rascunhos da entrega N2
+    ├── Atividade_N3/                    # Artigo LaTeX final completo (N3) e Roteiro do Pitch
+    └── artigos_referencia/              # PDFs de artigos científicos citados no artigo
 ```
+
+> [!NOTE]
+> Os documentos de suporte originais (`fonte_notion/` e o playbook do TCC) são mantidos externamente ao repositório público de produção.
 
 ---
 
-## 📝 Referências Acadêmicas Principais
+## Referências Acadêmicas Principais
 * **ÇAKMAK, F. (2019):** *"Mobile Learning and Mobile Assisted Language Learning in Focus"*. Language and Technology, v. 1, n. 1, p. 30–48.
 * **BERNARDO, J. C. O. (2013):** *"Dispositivos móveis digitais na incrementação do processo de ensino e aprendizagem: mobile-learning no rompimento de paradigmas"*. Revista EDaPECI, v. 13, n. 1, p. 141-157.
 * **KIM, H.; KWON, Y. H. (2012):** *"Exploring Smartphone Applications for Effective Mobile-Assisted Language Learning"*. Multimedia-Assisted Language Learning, v. 15, n. 1, p. 31-57.
