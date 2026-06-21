@@ -110,11 +110,14 @@ O repositório está estruturado conforme abaixo, contendo o código/configuraç
 multilingual-sdui-app/
 ├── .gitignore                           # Regras de ignores do Git (com ignores do LaTeX)
 ├── README.md                            # Documentação principal (este arquivo)
-└── atividade_academica/                 # Arquivos acadêmicos oficiais
-    ├── Atividade_N1/                    # PDF da Proposta Inicial
-    ├── Atividade_N2/                    # LaTeX e rascunhos da entrega N2
-    ├── Atividade_N3/                    # Artigo LaTeX final completo (N3) e Roteiro do Pitch
-    └── artigos_referencia/              # PDFs de artigos científicos citados no artigo
+├── atividade_academica/                 # Arquivos acadêmicos oficiais
+│   ├── Atividade_N1/                    # PDF da Proposta Inicial
+│   ├── Atividade_N2/                    # LaTeX e rascunhos da entrega N2
+│   ├── Atividade_N3/                    # Artigo LaTeX final completo (N3) e Roteiro do Pitch
+│   └── artigos_referencia/              # PDFs de artigos científicos citados no artigo
+└── docs/                                # Documentos conceituais e especificações do Notion
+    ├── TCC_Core_Requisitos.md           # Modelo de Requisitos, Atores e Casos de Uso (UML)
+    └── TCC_Arquitetura_Infraestrutura.md # Engenharia de Software, Custos e Riscos da Infraestrutura
 ```
 
 > [!NOTE]
